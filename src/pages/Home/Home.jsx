@@ -15,7 +15,7 @@ const Home = () => {
   <header className="l-header" id="header">
     <nav className="nav bd-container">
       <a href="/" className="nav__logo">
-        Pryde &#127987;&#65039;&#8205;&#127752;
+        Nocotine 🚭
       </a>
       <div className="nav__menu" id="nav-menu">
         <ul className="nav__list">
@@ -69,7 +69,7 @@ const Home = () => {
           <img src="https://res.cloudinary.com/dzy4r0fgy/image/upload/v1687070027/3dheartrainbow-2_cbzjoi.png" alt="" className="vert-move"/>
         </div>
         <div className="home__data">
-          <h1 className="home__title">Pryde &#127987;&#65039;&#8205;&#127752;</h1>
+          <h1 className="home__title">Nocotine 🚭</h1>
           <p className="home__description">
             Pryde aims to create an inclusive and supportive environment for the LGBTQ+ community to learn, discuss, and access information about sexual health. 
           </p>
