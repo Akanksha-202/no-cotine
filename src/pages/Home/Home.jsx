@@ -1,5 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { useAuth0 } from "@auth0/auth0-react";
+
 const Home = () => {
+
+  const { loginWithRedirect } = useAuth0();
+  
   return (
     <>
   {/*========== SCROLL TOP ==========*/}
@@ -42,9 +47,9 @@ const Home = () => {
             </a>
           </li>
           <li className="nav__item">
-            <a href="/accounts" className="nav__link">
+            <button style={{backgroundColor: "transparent", border: "none", cursor: "pointer", fontSize: '1rem'}} onClick={() => loginWithRedirect()} className="nav__link">
               Login
-            </a>
+            </button>
           </li>
           <li>
             <i className="bx bx-toggle-left change-theme" id="theme-button" />
