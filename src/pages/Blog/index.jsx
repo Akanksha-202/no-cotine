@@ -23,7 +23,7 @@ const Blog = () => {
     <>
      <nav className="nav bd-container">
       <a href="/" className="nav__logo">
-        Pryde &#127987;&#65039;&#8205;&#127752;
+      Nocotine 🚭
       </a>
       <div className="nav__menu" id="nav-menu">
         <ul className="nav__list">
