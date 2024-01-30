@@ -2,13 +2,14 @@ import React from 'react';
 import Heatmap from '../../components/Heatmap/Heatmap';
 import CustomCarousel from '../../components/Carousel/Carousel';
 import Multiselect from '../../components/Multiselect/Multiselect';
+import PhotoCarousel from '../../components/PhotoCarousel.js/PhotoCarousel';
 
 function Dashboard() {
-    const carouselItems = [
-        <div key={1} className='border-5 border-solid'>Content 1</div>,
-        <div key={2} className='border-5 border-solid'>Content 2</div>,
-        <div key={3} className='border-5 border-solid'>Content 3</div>,
-    ];
+    // const carouselItems = [
+    //     <div key={1} className='border-5 border-solid'>Content 1</div>,
+    //     <div key={2} className='border-5 border-solid'>Content 2</div>,
+    //     <div key={3} className='border-5 border-solid'>Content 3</div>,
+    // ];
 
     return (
         <div className='flex'>
@@ -47,13 +48,12 @@ function Dashboard() {
                     </div>
                     <div>User</div>
                 </div>
-
-                <div>
-                    <h1>Custom Carousel</h1>
-                    <CustomCarousel items={carouselItems} />
-                    <h3>Happy Moments for you + </h3>
+                <h3 className="text-lg font-bold mb-4">Happy Moments for you </h3>
+                <div className="max-w-lg p-0 bg-gray-200 rounded-md text-center" >
+                    <PhotoCarousel/>
                 </div>
-                <div  className='overflow-y-auto max-h-30'>
+                
+                <div className='overflow-y-auto overflow-x-hidden max-h-30 mt-5'>
                     <Heatmap/>
                 </div>
             </div>
