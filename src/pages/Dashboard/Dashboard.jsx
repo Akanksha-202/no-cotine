@@ -81,7 +81,7 @@ function Dashboard() {
                     </div>
 
 
-                    {/* <div className='p-4 m-3 mt-5 border rounded-lg shadow-md'>
+                    <div className='p-4 m-3 mt-5 border rounded-lg shadow-md'>
                         <h3 className='text-1xl font-bold mb-2'>Reason you have been Smoking</h3>
                         <div className='overflow-y-auto max-h-20'>
                             <ul>
@@ -92,7 +92,7 @@ function Dashboard() {
                                 <li>Reason 5</li>
                             </ul>
                         </div>
-                    </div> */}
+                    </div>
                     <div className='flex px-10 gap-5 mt-8'>
                         <div className='border rounded-lg shadow-md h-40 w-40'>
                             <h4 className='flex justify-center p-3 text-black'>
@@ -124,7 +124,7 @@ function Dashboard() {
 
                     <div>
                         <h3 className="text-lg font-bold mb-4">Happy Moments for you </h3>
-                        <div className="max-w-lg p-0 bg-gray-200 rounded-md text-center" >
+                        <div className="max-w-2xl bg-gray-200 rounded-md text-center" >
                             <PhotoCarousel />
                         </div>
                     </div>

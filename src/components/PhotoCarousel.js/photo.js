@@ -1,17 +1,25 @@
 // photos.js
 const photos = [
     {
-      src: "https://images.unsplash.com/photo-1604245439297-b2b4e64a962e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
+      src: "https://res.cloudinary.com/dx0dgujbj/image/upload/v1706639536/Nocotine/tyler-nix-V3dHmb1MOXM-unsplash_yeh6on.jpg",
       caption: "Photo 1",
     },
     {
-      src: "https://images.unsplash.com/photo-1604245439297-b2b4e64a962e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
+      src: "https://res.cloudinary.com/dx0dgujbj/image/upload/v1706639430/Nocotine/nathan-dumlao-Wr3comVZJxU-unsplash_tcegzq.jpg",
       caption: "Photo 2",
     },
     {
-      src: "https://images.unsplash.com/photo-1604245439297-b2b4e64a962e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
+      src: "https://res.cloudinary.com/dx0dgujbj/image/upload/v1706639421/Nocotine/jessica-rockowitz-6c4Uhhe68yQ-unsplash_hmawwe.jpg",
       caption: "Photo 3",
     },
+    {
+      src: "https://res.cloudinary.com/dx0dgujbj/image/upload/v1706639421/Nocotine/jessica-rockowitz-6c4Uhhe68yQ-unsplash_hmawwe.jpg",
+      caption: "Photo 3",
+    },
+    {
+      src: "https://res.cloudinary.com/dx0dgujbj/image/upload/v1706639421/Nocotine/jessica-rockowitz-6c4Uhhe68yQ-unsplash_hmawwe.jpg",
+      caption: "Photo 3",
+    }
     // Add more photos as needed
   ];
   
