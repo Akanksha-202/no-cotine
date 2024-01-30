@@ -15,7 +15,7 @@ const data = new Array(yLabels.length)
     new Array(xLabels.length).fill(0).map(() => Math.floor(Math.random() * 100))
   );
 
-export default function() {
+export default function HeatmapComponent() {
   return (
     <div style={{ fontSize: "13px" }}>
       <HeatMap
@@ -29,9 +29,12 @@ export default function() {
         height={45}
         onClick={(x, y) => alert(`Clicked ${x}, ${y}`)}
         cellStyle={(background, value, min, max, data, x, y) => ({
-          background: `rgb(0, 151, 230, ${1 - (max - value) / (max - min)})`,
+          background: `rgb(255, 0, 0, ${1 - (max - value) / (max - min)})`, // Change to red
           fontSize: "11.5px",
-          color: "#444"
+          color: "#fff", // Change text color to white
+          fontWeight: "bold", // Make text bold
+          border: "1px solid #fff", // Add a border to each cell
+          boxSizing: "border-box", // Include border in cell size calculation
         })}
         cellRender={value => value && <div>{value}</div>}
       />

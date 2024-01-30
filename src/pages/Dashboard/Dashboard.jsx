@@ -51,7 +51,7 @@ function Dashboard() {
                     <CustomCarousel items={carouselItems} />
                     <h3>Happy Moments for you + </h3>
                 </div>
-                <div>
+                <div  className='overflow-y-auto max-h-30'>
                     <Heatmap/>
                 </div>
             </div>
