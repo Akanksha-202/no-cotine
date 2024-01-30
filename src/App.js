@@ -7,7 +7,7 @@ import ReadingArea from './pages/ReadingArea/ReadingArea';
 import Dashboard from './pages/Dashboard/Dashboard';
 import Journal from './pages/Journal/Journal';
 import HypnoTherapy from './pages/HypnoTherapy/HypnoTherapy';
-import Profile from './components/Profile/Profile';
+import Profile from './pages/Profile/Profile';
 
 function App() {
   return (

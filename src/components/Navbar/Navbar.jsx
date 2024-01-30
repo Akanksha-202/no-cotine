@@ -58,10 +58,10 @@ const Navbar = () => {
                         {isAuthenticated ? (
                             <li className="nav__item">
                                 <div className='Dropdown'>
-                                    <FontAwesomeIcon icon={faUser} style={{ color: '#fff' }} />
+                                    <FontAwesomeIcon icon={faUser} style={{ color: '#000' }} />
                                     <button className='ButtonDropdown' onClick={toggleDropdown}>
                                         Account
-                                        <FontAwesomeIcon icon={faCaretDown} style={{ color: '#fff' }} />
+                                        <FontAwesomeIcon icon={faCaretDown} style={{ color: '#000' }} />
                                     </button>
                                     {isOpen && (
                                         <div className='Dropdowncontent'>

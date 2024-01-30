@@ -1188,7 +1188,7 @@ img.vert-move {
 }
 
 .Dropdown:hover {
-  background-color: #FDA5A4;
+  background-color: #dca7a7;
   /* border-radius: 10px; */
 }
 
@@ -1217,7 +1217,7 @@ img.vert-move {
 .ButtonDropdown {
   font-size: 18px;
   font-weight: 600;
-  color: white;
+  color: black;
   padding: 14px 16px;
   background-color: inherit;
   margin: 0;
