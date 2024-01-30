@@ -3,6 +3,7 @@ import Heatmap from '../../components/Heatmap/Heatmap';
 import CustomCarousel from '../../components/Carousel/Carousel';
 import Multiselect from '../../components/Multiselect/Multiselect';
 import PhotoCarousel from '../../components/PhotoCarousel.js/PhotoCarousel';
+import StreakCalendar from '../../components/StreakCalendar/StreakCalendar';
 
 function Dashboard() {
     // const carouselItems = [
@@ -14,8 +15,9 @@ function Dashboard() {
     return (
         <div className='flex'>
             <div>
-                <div>
-                    <h3 className='uppercase'>Streak</h3>
+                <div className='m-2'>
+                    <h3 className='uppercase '>Streak</h3>
+                    <StreakCalendar/>
                     <h6>12 days</h6>
                 </div>
                 <div className='border-2 border-solid'>
