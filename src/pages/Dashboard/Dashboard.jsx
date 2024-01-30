@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
+import { FaPencilAlt } from 'react-icons/fa';
 import Heatmap from '../../components/Heatmap/Heatmap';
-import CustomCarousel from '../../components/Carousel/Carousel';
 import Modal from 'react-modal';
 import Multiselect from '../../components/Multiselect/Multiselect';
 import Navbar from '../../components/Navbar/Navbar';
-import { streak } from '../../images/image';
+import { mic, streak } from '../../images/image';
 import PhotoCarousel from '../../components/PhotoCarousel.js/PhotoCarousel';
+import { effectsOfSmoking } from '../../components/Stats/data';
 
 function Dashboard() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const carouselItems = [
-        <div key={1} className='border-5 border-solid'>Content 1</div>,
-        <div key={2} className='border-5 border-solid'>Content 2</div>,
-        <div key={3} className='border-5 border-solid'>Content 3</div>,
-    ];
 
     const openModal = () => {
         setIsModalOpen(true);
@@ -22,6 +17,20 @@ function Dashboard() {
 
     const closeModal = () => {
         setIsModalOpen(false);
+    };
+
+    const [selectedStat, setSelectedStat] = useState(null);
+    const synth = window.speechSynthesis;  // Access the speech synthesis API
+
+    const handleStatClick = (stat) => {
+        // Set the selected stat
+        setSelectedStat(stat);
+
+        // Create a new SpeechSynthesisUtterance instance
+        const utterance = new SpeechSynthesisUtterance("Smoking causes" + stat);
+
+        // Speak the selected stat
+        synth.speak(utterance);
     };
 
     return (
@@ -36,14 +45,13 @@ function Dashboard() {
                     <h2>Reason you Smoked today??</h2>
                     <Multiselect />
                     <div className="mt-4">
-                        <label htmlFor="cigarettesInput" className="block text-sm font-medium text-gray-700">
+                        <h2 className="block text-sm font-medium text-red-700">
                             How many cigarettes did you have today?
-                        </label>
+                        </h2>
                         <input
                             type="number"
                             id="cigarettesInput"
                             className="mt-1 p-2 w-full border rounded-md"
-                        // You can handle input changes and store the value in state if needed
                         />
                     </div>
 
@@ -70,25 +78,36 @@ function Dashboard() {
                     </div>
 
 
-                    <div className='border-2 border-solid '>
-                        <h4>Reason you have been Smoking</h4>
+                    <div className='p-4 m-3 mt-5 border rounded-lg shadow-md'>
+                        <h3 className='text-1xl font-bold mb-2'>Reason you have been Smoking</h3>
                         <div className='overflow-y-auto max-h-20'>
-                        <ul>
-                            <li>Reason 1</li>
-                            <li>Reason 2</li>
-                            <li>Reason 3</li>
-                            <li>Reason 4</li>
-                            <li>Reason 5</li>
-                        </ul>
-                    </div>
-                    </div>
-                    <div className='flex px-10'>
-                        <div className='border-2 h-40 w-40'>
-                            <h4>Time Capsule</h4>
+                            <ul>
+                                <li>Reason 1</li>
+                                <li>Reason 2</li>
+                                <li>Reason 3</li>
+                                <li>Reason 4</li>
+                                <li>Reason 5</li>
+                            </ul>
                         </div>
-                        <div className='border-2 h-40 w-40'>
-                            <h4>Stat of the day</h4>
+                    </div>
+                    <div className='flex px-10 gap-5 mt-8'>
+                        <div className='border rounded-lg shadow-md h-40 w-40'>
+                            <h4 className='flex justify-center p-3 text-black'>
+                                Time Capsule
+                                <FaPencilAlt className='text-lg p-1 cursor-pointer' />
+                            </h4>
+                            <img src={mic} alt='audio for self' className='m-auto cursor-pointer' />
                         </div>
+                        <div className='border rounded-lg shadow-md h-40 w-40'>
+                            <h4 className='flex justify-center p-3 text-black'>Stat of the Day</h4>
+                            <img
+                                src={mic}
+                                alt='stat of the day'
+                                className='m-auto cursor-pointer'
+                                onClick={() => handleStatClick(effectsOfSmoking.healthRisks[Math.floor(Math.random() * effectsOfSmoking.healthRisks.length)])}
+                            />
+                        </div>
+
                     </div>
                 </div>
 
@@ -107,7 +126,7 @@ function Dashboard() {
                         </div>
                     </div>
                     <div className='overflow-y-auto overflow-x-hidden max-h-30 mt-5'>
-                        {/* <Heatmap /> */}
+                        <Heatmap />
                     </div>
                 </div>
 

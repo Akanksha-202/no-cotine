@@ -1,3 +1,4 @@
 import streak from './streak.png';
+import mic from './mic.png';
 
-export {streak}
+export {streak, mic}

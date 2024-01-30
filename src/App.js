@@ -5,6 +5,7 @@ import Home from './pages/Home/Home';
 import Blog from './pages/Blog';
 import ReadingArea from './pages/ReadingArea/ReadingArea';
 import Dashboard from './pages/Dashboard/Dashboard';
+import Journal from './pages/Journal/Journal';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path='/readingarea' element={<ReadingArea/>} />
       <Route path='/blog/:id' element={<Blog/>} />
       <Route path='/dashboard' element={<Dashboard/>}/>
+      <Route path='/journal' element={<Journal/>}/>
       </Routes>
   );
 }
