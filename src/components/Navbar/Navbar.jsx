@@ -13,8 +13,14 @@ function Navbar() {
                 <div className="nav__menu" id="nav-menu">
                     <ul className="nav__list">
                         <li className="nav__item">
-                            <a href="#about" className="nav__link ">
+                            <a href="/#about" className="nav__link ">
                                 About
+                            </a>
+                        </li>
+
+                        <li className="nav__item">
+                            <a href="/journal" className="nav__link ">
+                                Journal
                             </a>
                         </li>
                         {/* 
@@ -30,12 +36,12 @@ function Navbar() {
           </li> */}
                         {/* <li class="nav__item"><a href="#timeline" class="nav__link">Timeline</a></li> */}
                         <li className="nav__item">
-                            <a href="#features" className="nav__link">
+                            <a href="/#features" className="nav__link">
                                 Features
                             </a>
                         </li>
                         <li className="nav__item">
-                            <a href="#team" className="nav__link" >
+                            <a href="/#team" className="nav__link" >
                                 Team
                             </a>
                         </li>
