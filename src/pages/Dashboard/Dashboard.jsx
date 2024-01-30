@@ -1,4 +1,5 @@
 import React from 'react';
+import Heatmap from '../../components/Heatmap/Heatmap';
 import CustomCarousel from '../../components/Carousel/Carousel';
 
 function Dashboard() {
@@ -51,7 +52,7 @@ function Dashboard() {
                     <h3>Happy Moments for you + </h3>
                 </div>
                 <div>
-                    HeatMap
+                    <Heatmap/>
                 </div>
             </div>
         </div>
