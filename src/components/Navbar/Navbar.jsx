@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 
-function Navbar() {
-    const { loginWithRedirect } = useAuth0();
+const Navbar = () => {
+    const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setIsOpen(!isOpen);
+      };
+
+    
     return (
         <header className="l-header" id="header">
             <nav className="nav bd-container">
@@ -45,11 +55,40 @@ function Navbar() {
                                 Team
                             </a>
                         </li>
-                        <li className="nav__item">
+                        {isAuthenticated ? (
+                            <li className="nav__item">
+                                <div className='Dropdown'>
+                                    <FontAwesomeIcon icon={faUser} style={{ color: '#fff' }} />
+                                    <button className='ButtonDropdown' onClick={toggleDropdown}>
+                                        Account
+                                        <FontAwesomeIcon icon={faCaretDown} style={{ color: '#fff' }} />
+                                    </button>
+                                    {isOpen && (
+                                        <div className='Dropdowncontent'>
+                                            <a href="/profile">User Profile</a>
+                                            <button
+                                                onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
+                                                style={{ fontSize: '16px', fontWeight: '600' }}
+                                            >
+                                                Log Out
+                                            </button>
+                                        </div>
+                                    )}
+                                </div>
+                            </li>
+                        ) : (
+                            <li className="nav__item">
+                                <button style={{ backgroundColor: "transparent", border: "none", cursor: "pointer", fontSize: '1rem' }} onClick={() => loginWithRedirect()} className="nav__link">
+                                Login
+                            </button>
+                            </li>
+                        )}
+
+                        {/* <li className="nav__item">
                             <button style={{ backgroundColor: "transparent", border: "none", cursor: "pointer", fontSize: '1rem' }} onClick={() => loginWithRedirect()} className="nav__link">
                                 Login
                             </button>
-                        </li>
+                        </li> */}
                         <li>
                             <i className="bx bx-toggle-left change-theme" id="theme-button" />
                         </li>

@@ -7,6 +7,7 @@ import ReadingArea from './pages/ReadingArea/ReadingArea';
 import Dashboard from './pages/Dashboard/Dashboard';
 import Journal from './pages/Journal/Journal';
 import HypnoTherapy from './pages/HypnoTherapy/HypnoTherapy';
+import Profile from './components/Profile/Profile';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path='/dashboard' element={<Dashboard/>}/>
       <Route path='/journal' element={<Journal/>}/>
       <Route path='/hypnotherapy' element={<HypnoTherapy />} />
+      <Route path="/profile" element={<Profile/>} />
       </Routes>
   );
 }
