@@ -23,7 +23,7 @@ const Home = () => {
             <div className="home__data">
               <h1 className="home__title">Nocotine 🚭</h1>
               <p className="home__description">
-                Pryde aims to create an inclusive and supportive environment for the LGBTQ+ community to learn, discuss, and access information about sexual health.
+              A supportive hub for those breaking free from smoking habits. We offer tools, discussions, and a caring community, fostering a positive journey toward a smoke-free life.
               </p>
             </div>
           </div>
@@ -33,10 +33,10 @@ const Home = () => {
           <div className="share__container bd-grid">
             <div className="share__data">
               <h2 className="section-title-center">
-                How Pryde was Born? <br />{" "}
+                How Nicotine was Born? <br />{" "}
               </h2>
               <p className="share__description">
-                Our project was born from a case study that uncovered a misconception: lesbian women were not using protection as frequently as with male partners. This fueled our passion to bridge the gap between inadequate LGBTQ+ healthcare support and the need for accurate sexual health information. We aim to create a safe space that empowers individuals, fosters acceptance, and ensures that no one feels alone in their sexual health journey.
+              No-cotine traces its roots back to a realization – the struggle individuals face in quitting smoking lacked a comprehensive and supportive solution. Motivated by this insight, our project was conceived to bridge the gap between the challenge of nicotine addiction and the need for a holistic, empowering platform. We aspire to create a safe digital space that guides and supports individuals on their journey to a smoke-free life, ensuring that no one feels alone in their pursuit of a healthier lifestyle.
               </p>
             </div>
             <div className="share__img">
@@ -83,7 +83,7 @@ const Home = () => {
     </section>  */}
         {/*========== CATEGORIES ==========*/}
         <section className="decoration section bd-container" id="features">
-          <h2 className="section-title">Features of Pryde</h2>
+          <h2 className="section-title">Features of Nicotine</h2>
           <div className="decoration__container bd-grid">
             <div className="decoration__data">
               <img
@@ -93,7 +93,7 @@ const Home = () => {
                 id="apple_render"
               />
               <h3 className="decoration__title">Reading Area</h3>
-              <p>View a collection of resources related to sexual health and how you can stay safe physically and mentally. Spread love, be healthy, be you!</p><br></br>
+              <p>Dive into our Reading Corner – a source of inspiration, success stories, and expert insights. Let these words guide you on your journey to a smoke-free life.</p><br></br>
               {/*<a href="./view/designsolve.html" class="button button-link">Details</a>*/}
               <div className="button">
                 <a
