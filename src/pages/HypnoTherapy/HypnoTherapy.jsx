@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import AudioCard from '../../components/audioCard/AudioCard'
 import { meditate, peace } from '../../images/image'
-import { therapy1, therapy2 } from '../../audio/audio'
 
 function HypnoTherapy() {
   return (
