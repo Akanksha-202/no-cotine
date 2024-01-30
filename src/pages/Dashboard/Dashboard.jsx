@@ -1,6 +1,7 @@
 import React from 'react';
 import Heatmap from '../../components/Heatmap/Heatmap';
 import CustomCarousel from '../../components/Carousel/Carousel';
+import Multiselect from '../../components/Multiselect/Multiselect';
 
 function Dashboard() {
     const carouselItems = [
@@ -18,7 +19,8 @@ function Dashboard() {
                 </div>
                 <div className='border-2 border-solid'>
                     <h4>Reason you have been Smoking</h4>
-                    <div className='overflow-y-auto max-h-20'>
+                    <Multiselect/>
+                    {/* <div className='overflow-y-auto max-h-20'>
                         <ul>
                             <li>Reason 1</li>
                             <li>Reason 2</li>
@@ -26,7 +28,7 @@ function Dashboard() {
                             <li>Reason 4</li>
                             <li>Reason 5</li>
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
                 <div className='flex px-10'>
                     <div className='border-2 h-40 w-40'>
