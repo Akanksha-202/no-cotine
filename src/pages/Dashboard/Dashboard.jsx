@@ -7,6 +7,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import { mic, streak } from '../../images/image';
 import PhotoCarousel from '../../components/PhotoCarousel.js/PhotoCarousel';
 import { effectsOfSmoking } from '../../components/Stats/data';
+import StreakCalendar from '../../components/StreakCalendar/StreakCalendar';
 
 function Dashboard() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -68,7 +69,9 @@ function Dashboard() {
                     <div className="p-4 m-4 border rounded-lg shadow-md">
                         <h3 className="text-2xl font-bold uppercase mb-2">Streak</h3>
                         <div className='flex'>
-                            <h6 className="text-2xl">12 days</h6>
+                            
+                            <StreakCalendar/>
+                            
                             <img src={streak} alt='streak' className='h-8' />
                         </div>
                         <button onClick={openModal} className='mt-4 p-2 bg-blue-500 text-white rounded-md'>
@@ -78,7 +81,7 @@ function Dashboard() {
                     </div>
 
 
-                    <div className='p-4 m-3 mt-5 border rounded-lg shadow-md'>
+                    {/* <div className='p-4 m-3 mt-5 border rounded-lg shadow-md'>
                         <h3 className='text-1xl font-bold mb-2'>Reason you have been Smoking</h3>
                         <div className='overflow-y-auto max-h-20'>
                             <ul>
@@ -89,7 +92,7 @@ function Dashboard() {
                                 <li>Reason 5</li>
                             </ul>
                         </div>
-                    </div>
+                    </div> */}
                     <div className='flex px-10 gap-5 mt-8'>
                         <div className='border rounded-lg shadow-md h-40 w-40'>
                             <h4 className='flex justify-center p-3 text-black'>
