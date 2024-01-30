@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css';
+import Navbar from '../Navbar/Navbar';
 
 const Header = () => (
   <header className='home-header'>
@@ -50,6 +51,9 @@ const Header = () => (
         <i className="bx bx-grid-alt" />
       </div>
     </nav>
+
+  <header className='home-header mt-16'>
+    <Navbar />
     <h1>
      Reading Area
     </h1>
