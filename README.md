@@ -34,11 +34,11 @@ Inspired by Aryan's journey, we believe that every individual has the potential 
 <p>Get to know us better and understand the driving force behind No-cotine.</p>
  
 ![image](https://github.com/i-am-SnehaChauhan/no-cotine/assets/94298791/0e83bc47-3aa3-41b3-a8ec-6f659b2c7f9b)
-![image](https://github.com/i-am-SnehaChauhan/no-cotine/assets/94298791/96407a60-cfc1-462f-a41b-3458c4bb2525)
-
 
 
 # Key Features✨
+![image](https://github.com/i-am-SnehaChauhan/no-cotine/assets/94298791/f15cfbd5-4a56-4080-88e1-f69468664776)
+
 
 ### Smoke-Free Tracker
   * Visualize progress with an intuitive heatmap and streak counter.
