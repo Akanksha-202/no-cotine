@@ -1,10 +1,10 @@
-![](https://res.cloudinary.com/dzy4r0fgy/image/upload/v1687060190/PRYDE_sqcuzi.png)"
+![](https://res.cloudinary.com/dx0dgujbj/image/upload/v1706719021/Nocotine/NOCOTINE_htw91e.png)"
 
 ## Introduction
 <table style="border: none;">
   <tr>
     <td>No-cotine is a digital haven designed to support and uplift individuals in their journey to quit smoking. We understand the challenges of breaking free from nicotine addiction and are dedicated to creating an inclusive and encouraging space for everyone striving for a smoke-free life. In this digital haven, we provide a range of tools, from the innovative smoke-free tracker to motivational content tailored to each user's journey. Our commitment extends beyond the individual, aiming to create a ripple effect of positive change within families and communities. </td>
-    <td><img src="https://media4.giphy.com/media/fYNy092DoKNpshv70U/giphy.gif?cid=ecf05e47lz7igg6cy6tfa9s1w1gq5j11vqulnd8umgl51nrl&ep=v1_gifs_search&rid=giphy.gif&ct=g"/></td>
+    <td><img src="https://res.cloudinary.com/dx0dgujbj/image/upload/v1706715202/Nocotine/1_agtbhm.png"/></td>
   </tr>
 </table>
 
@@ -27,14 +27,18 @@ Inspired by Aryan's journey, we believe that every individual has the potential 
 ### Landing page
  <p>When you visit our website, you'll be greeted by an engaging landing page that captures the essence of Pryde.</p>
  
-  ![image](https://github.com/i-am-SnehaChauhan/Pryde/assets/94298791/bd63150b-4aa1-40bc-a60f-1c6b8275d0f2)
+  ![image](https://github.com/i-am-SnehaChauhan/no-cotine/assets/94298791/cc770a34-421c-4b46-b1b2-ef0acd5556fb)
+
 
 ### About Us
 <p>Get to know us better and understand the driving force behind No-cotine.</p>
  
- ![image](https://github.com/i-am-SnehaChauhan/Pryde/assets/94298791/cb92a7fa-5dff-4019-ac1d-43e87ba9d545)
+![image](https://github.com/i-am-SnehaChauhan/no-cotine/assets/94298791/0e83bc47-3aa3-41b3-a8ec-6f659b2c7f9b)
+
 
 # Key Features✨
+![image](https://github.com/i-am-SnehaChauhan/no-cotine/assets/94298791/f15cfbd5-4a56-4080-88e1-f69468664776)
+
 
 ### Smoke-Free Tracker
   * Visualize progress with an intuitive heatmap and streak counter.
@@ -75,4 +79,5 @@ Embrace your journey towards a smoke-free life with No-cotine's comprehensive fe
 
 <h1 align='center'>Contributors</h1>
 
-![image](https://github.com/i-am-SnehaChauhan/Pryde/assets/94298791/d6697bb7-dd02-453c-b7a3-40fa5bcddc69)
+![image](https://github.com/i-am-SnehaChauhan/no-cotine/assets/94298791/d82cd997-70a4-4367-85f5-b516fd76ed76)
+
