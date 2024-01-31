@@ -8,6 +8,7 @@ import { mic, streak } from '../../images/image';
 import PhotoCarousel from '../../components/PhotoCarousel.js/PhotoCarousel';
 import { effectsOfSmoking } from '../../components/Stats/data';
 import StreakCalendar from '../../components/StreakCalendar/StreakCalendar';
+import Profile from '../../components/Profile/Profile';
 
 function Dashboard() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -119,7 +120,7 @@ function Dashboard() {
                         <div>
                             <h3>User Badges</h3>
                         </div>
-                        <div>User</div>
+                        <div><Profile /></div>
                     </div>
 
                     <div>

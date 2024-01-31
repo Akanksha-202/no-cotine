@@ -26,6 +26,7 @@ const Profile = () => {
       const reader = new FileReader();
       reader.onloadend = () => {
         setSelectedImage(reader.result);
+        // Store user data in Firebase
       };
       reader.readAsDataURL(file);
     }
@@ -34,9 +35,9 @@ if(isLoading){
   return <Loading />
 }
   return (
-    <Container sx={{ marginTop: '10%', boxShadow: '0 .5rem 1rem rgba(0,0,0,.15)', marginRight: '10%', marginLeft: '10%', marginBottom: '20%', border: '2px solid #FDA5A4', paddingBottom: '50px' }}>
+    <Container sx={{ marginLeft:'-100px',marginTop: '10%', boxShadow: '0 .5rem 1rem rgba(0,0,0,.15)' ,marginBottom: '10%', border: '2px solid #FDA5A4', paddingBottom: '50px' }}>
       {isAuthenticated && (
-        <Grid container spacing={3} sx={{ boxShadow: '0 .5rem 1rem rgba(0,0,0,.15)', textAlign: 'center', marginTop: '50px', paddingTop: '20px', marginLeft: '8%', marginRight: '8%', marginBottom: '2%', borderRadius: '20px', backgroundColor: '#F5F0F0', maxWidth: '100%' }}>
+        <Grid container spacing={3} sx={{ boxShadow: '0 .5rem 1rem rgba(0,0,0,.15)', textAlign: 'center', marginTop: '50px', paddingTop: '20px', marginLeft: '0.25%', marginRight: '8%', marginBottom: '2%', borderRadius: '20px', backgroundColor: '#F5F0F0', maxWidth: '100%' }}>
           {isSmallScreen ? (
             <Grid item xs={12} md={4}>
               <Grid item xs={12} sx={{ textAlign: 'center' }}>
@@ -56,10 +57,12 @@ if(isLoading){
                 type="file" 
                 accept="image/*" 
                 variant="outlined" 
-                sx={{ marginTop: 3 }} onChange={handleImageChange} />
+                sx={{ marginTop: 3}} onChange={handleImageChange} /> 
+                <Button variant="contained" sx={{ fontSize:10, marginTop:1, backgroundColor:'#72bcd4' }}>Update Avatar</Button>
+
               </Grid>
               <Grid item md={8}>
-                <Typography variant="h4">{user.nickname}</Typography>
+                <Typography sx={{marginTop:'20%'}} variant="h4">{user.name}</Typography>
                 <Typography>{user.email}</Typography>
               </Grid>
             </>
