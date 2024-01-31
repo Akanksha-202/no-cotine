@@ -1,4 +1,4 @@
-![](https://res.cloudinary.com/dzy4r0fgy/image/upload/v1687060190/PRYDE_sqcuzi.png)"
+![](https://res.cloudinary.com/dx0dgujbj/image/upload/v1706719021/Nocotine/NOCOTINE_htw91e.png)"
 
 ## Introduction
 <table style="border: none;">
