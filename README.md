@@ -27,12 +27,16 @@ Inspired by Aryan's journey, we believe that every individual has the potential 
 ### Landing page
  <p>When you visit our website, you'll be greeted by an engaging landing page that captures the essence of Pryde.</p>
  
-  ![image](https://github.com/i-am-SnehaChauhan/Pryde/assets/94298791/bd63150b-4aa1-40bc-a60f-1c6b8275d0f2)
+  ![image](https://github.com/i-am-SnehaChauhan/no-cotine/assets/94298791/cc770a34-421c-4b46-b1b2-ef0acd5556fb)
+
 
 ### About Us
 <p>Get to know us better and understand the driving force behind No-cotine.</p>
  
- ![image](https://github.com/i-am-SnehaChauhan/Pryde/assets/94298791/cb92a7fa-5dff-4019-ac1d-43e87ba9d545)
+![image](https://github.com/i-am-SnehaChauhan/no-cotine/assets/94298791/0e83bc47-3aa3-41b3-a8ec-6f659b2c7f9b)
+![image](https://github.com/i-am-SnehaChauhan/no-cotine/assets/94298791/96407a60-cfc1-462f-a41b-3458c4bb2525)
+
+
 
 # Key Features✨
 
@@ -75,4 +79,5 @@ Embrace your journey towards a smoke-free life with No-cotine's comprehensive fe
 
 <h1 align='center'>Contributors</h1>
 
-![image](https://github.com/i-am-SnehaChauhan/Pryde/assets/94298791/d6697bb7-dd02-453c-b7a3-40fa5bcddc69)
+![image](https://github.com/i-am-SnehaChauhan/no-cotine/assets/94298791/d82cd997-70a4-4367-85f5-b516fd76ed76)
+
