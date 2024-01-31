@@ -170,7 +170,7 @@ const Home = () => {
             </div>
             <div class="decoration__data team_data">
               <img src="https://res.cloudinary.com/dzy4r0fgy/image/upload/v1689487397/WhatsApp_Image_2023-07-16_at_10.40.05_AM_h2qwva.jpg" alt="" class="decoration__img" id="team_render" />
-              <h3 class="decoration__title">Aakanksha Jha</h3>
+              <h3 class="decoration__title">Akanksha Jha</h3>
               <p>I transform challenges into digital solutions and development is my escape. &#128161;&#x2728;</p>
             </div>
             <div class="decoration__data team_data">
