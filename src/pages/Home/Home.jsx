@@ -158,24 +158,24 @@ const Home = () => {
         <section class="decoration section bd-container" id="team">
           <h2 class="section-title">Team</h2>
           <div class="decoration__container bd-grid team-grid">
-            <div class="decoration__data team_data">
+            {/* <div class="decoration__data team_data">
               <img src="https://hygenie-gsc.netlify.app/img/Team/pooja_gera.jpg" alt="" class="decoration__img" id="team_render" />
               <h3 class="decoration__title">Pooja Gera</h3>
               <p>I speak Python &#128013; and I love solving problems with technology &#129302;.</p>
-            </div>
-            <div class="decoration__data team_data">
-              <img src="https://res.cloudinary.com/dzy4r0fgy/image/upload/v1687075091/317756782_1982617338750339_6635398324002590526_n_sqauys.jpg" alt="" class="decoration__img" id="team_render" />
-              <h3 class="decoration__title">Jahnvi Srivastava</h3>
-              <p>With the Heart of a Problem Solver, I meticulously craft Real-World Solutions that make a difference &#128161;&#x2728;</p>
-            </div>
+            </div> */}
             <div class="decoration__data team_data">
               <img src="https://res.cloudinary.com/dzy4r0fgy/image/upload/v1687075071/WhatsApp_Image_2023-06-18_at_1.24.29_PM_d7tjzm.jpg" alt="" class="decoration__img" id="team_render" />
               <h3 class="decoration__title">Sneha Chauhan</h3>
-              <p>Empowering Minds, Elevating Lives: The Optimistic Developer</p>
+              <p>Empowering Minds, Elevating Lives: The Optimistic Developer 🚀</p>
             </div>
             <div class="decoration__data team_data">
-              <img src="https://hygenie-gsc.netlify.app/img/Team/Karan-Taneja.jpeg" alt="" class="decoration__img" id="team_render" />
-              <h3 class="decoration__title">Karan Taneja</h3>
+              <img src="https://res.cloudinary.com/dzy4r0fgy/image/upload/v1689487397/WhatsApp_Image_2023-07-16_at_10.40.05_AM_h2qwva.jpg" alt="" class="decoration__img" id="team_render" />
+              <h3 class="decoration__title">Aakanksha Jha</h3>
+              <p>I transform challenges into digital solutions and development is my escape. &#128161;&#x2728;</p>
+            </div>
+            <div class="decoration__data team_data">
+              <img src="https://res.cloudinary.com/dx0dgujbj/image/upload/v1706717813/Nocotine/Screenshot_2024-01-31_214621_trw5mh.png" alt="" class="decoration__img" id="team_render" />
+              <h3 class="decoration__title">Aditya</h3>
               <p>I think creatively to build sustainable technological solutions! &#128176;</p>
             </div>
           </div>
