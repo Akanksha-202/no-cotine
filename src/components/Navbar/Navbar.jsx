@@ -30,7 +30,9 @@ const Navbar = () => {
                         addDoc(usersCollection, {
                             email,
                             picture,
-                            name
+                            name,
+                            reasons: [],
+                            cigarettes:'',
                         });
                     }
                 })

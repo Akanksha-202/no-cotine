@@ -112,11 +112,11 @@ const Home = () => {
                 className="decoration__img"
                 id="burger_render"
               />
-              <h3 className="decoration__title">Smoke-Free Tracker</h3>
-              <p>Visualize progress with an intuitive heatmap and streak counter.ecord daily feelings through audio journaling for a holistic approach.</p><br></br>
+              <h3 className="decoration__title">Smoke-Free Journey</h3>
+              <p>Record your moments of craving, analyze triggers, and note how you overcome them. Gain insights into your journey towards a smoke-free life.</p><br></br>
               <div className="button">
                 <a
-                  href="https://prydebot.streamlit.app/"
+                  href="/journal"
                   target="_blank"
                   className="button-link"
                   style={{ color: "white" }}
@@ -137,7 +137,7 @@ const Home = () => {
                 Holistic support for mental and emotional well-being on your quit journey. </p><br></br>
               <div className="button">
                 <a
-                  href="./view/hacksolve.html"
+                  href="/hypnotherapy"
                   className="button-link"
                   style={{ color: "white" }}
                 >

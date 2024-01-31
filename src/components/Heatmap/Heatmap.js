@@ -1,43 +1,53 @@
-import React from "react";
-import HeatMap from "react-heatmap-grid";
+import React, { useState, useEffect } from 'react';
+import positiveMessages from './positiveMessages'; // Import positive reinforcement messages
 
-const xLabels = new Array(24).fill(0).map((_, i) => `${i}`);
+const CigaretteTrackerWithGauge = ({ dailyCigarettes }) => {
+  const [fillLevel, setFillLevel] = useState(0);
 
-// Display only even labels
-const xLabelsVisibility = new Array(24)
-  .fill(0)
-  .map((_, i) => (i % 2 === 0 ? true : false));
+  useEffect(() => {
+    // Calculate fill level based on dailyCigarettes and a healthy goal
+    const healthyGoal = 2; 
+    const calculatedFillLevel = Math.min((dailyCigarettes / healthyGoal) * 100, 100);
+    setFillLevel(calculatedFillLevel);
+  }, [dailyCigarettes]);
 
-const yLabels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-const data = new Array(yLabels.length)
-  .fill(0)
-  .map(() =>
-    new Array(xLabels.length).fill(0).map(() => Math.floor(Math.random() * 100))
-  );
+  const getMessage = () => {
+    // Determine encouraging message based on fill level
+    if (fillLevel <= 5) {
+      return positiveMessages.low; // You can define your own positive messages
+    } else if (fillLevel <= 10) {
+      return positiveMessages.moderate;
+    } else {
+      return positiveMessages.high;
+    }
+  };
+  const getImage= () => {
+    // Determine encouraging message based on fill level
+    if (fillLevel <= 5) {
+      return 'https://res.cloudinary.com/damtnzoo8/image/upload/v1706738777/Reasons_you_have_been_Smoking_xonaqt.png';
+    } else if (fillLevel <= 10) {
+      return 'https://res.cloudinary.com/damtnzoo8/image/upload/v1706738946/Reasons_you_have_been_Smoking_1_cu0zfl.png';
+    } else {
+      return 'https://res.cloudinary.com/damtnzoo8/image/upload/v1706739227/Reasons_you_have_been_Smoking_2_du5sb3.png';
+    }
+  };
 
-export default function HeatmapComponent() {
+  const gaugeStyle = {
+    width: '200px', // Adjust the width based on your image size
+    height: '200px', // Adjust the height based on your image size
+    backgroundImage: `conic-gradient(#4CAF50 0% ${fillLevel}%, #fff ${fillLevel}% 100%)`,
+    borderRadius: '50%',
+    position: 'relative',
+  };
+
   return (
-    <div style={{ fontSize: "13px" }}>
-      <HeatMap
-        xLabels={xLabels}
-        yLabels={yLabels}
-        xLabelsLocation={"bottom"}
-        xLabelsVisibility={xLabelsVisibility}
-        xLabelWidth={60}
-        data={data}
-        squares
-        height={45}
-        onClick={(x, y) => alert(`Clicked ${x}, ${y}`)}
-        cellStyle={(background, value, min, max, data, x, y) => ({
-          background: `rgb(255, 0, 0, ${1 - (max - value) / (max - min)})`, // Change to red
-          fontSize: "11.5px",
-          color: "#fff", // Change text color to white
-          fontWeight: "bold", // Make text bold
-          border: "1px solid #fff", // Add a border to each cell
-          boxSizing: "border-box", // Include border in cell size calculation
-        })}
-        cellRender={value => value && <div>{value}</div>}
-      />
+    <div>
+      <div style={gaugeStyle}>
+        <img src={getImage()} alt="Gauge" style={{ width: '100%', height: '100%' }} />
+      </div>
+      <p>{getMessage()}</p>
     </div>
   );
-}
+};
+
+export default CigaretteTrackerWithGauge;

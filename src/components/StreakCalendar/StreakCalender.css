@@ -1,0 +1,14 @@
+/* StreakCalendar.css */
+
+/* Example styles for logged-in dates */
+.logged-in-date {
+    background-color: #34d399; /* Green color for logged-in dates */
+    color: white;
+  }
+  
+  /* Example styles for future dates */
+  .future-date {
+    background-color: #d1d5db; /* Gray color for future dates */
+    color: #6b7280;
+  }
+  

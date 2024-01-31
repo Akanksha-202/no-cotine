@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaPencilAlt } from 'react-icons/fa';
 import Heatmap from '../../components/Heatmap/Heatmap';
 import Modal from 'react-modal';
@@ -9,9 +9,18 @@ import PhotoCarousel from '../../components/PhotoCarousel.js/PhotoCarousel';
 import { effectsOfSmoking } from '../../components/Stats/data';
 import StreakCalendar from '../../components/StreakCalendar/StreakCalendar';
 import Profile from '../../components/Profile/Profile';
+import { useAuth0 } from "@auth0/auth0-react";
+import { collection, doc, getDocs, query, updateDoc, where } from 'firebase/firestore';
+import { firestore } from '../../firebase/utils';
+import CigaretteTrackerWithGauge from '../../components/Heatmap/Heatmap';
+import AudioC from '../../components/Audio/AudioC';
 
 function Dashboard() {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [reasons, setReasons] = useState([]);
+    const [cigarettesInput, setCigarettesInput] = useState(0);
+    const [fetchCigarettes, setFetchCigarettes] = useState(0);
+    const { user } = useAuth0();
 
     const openModal = () => {
         setIsModalOpen(true);
@@ -19,6 +28,8 @@ function Dashboard() {
 
     const closeModal = () => {
         setIsModalOpen(false);
+        handleCigarettesSubmit();
+        window.location.reload();
     };
 
     const [selectedStat, setSelectedStat] = useState(null);
@@ -34,6 +45,99 @@ function Dashboard() {
         // Speak the selected stat
         synth.speak(utterance);
     };
+    const handleStoryClick = (story) => {
+        const audioElement = new Audio(story);
+        audioElement.play();
+    };
+
+    const fetchUserDataByEmail = async (email) => {
+        try {
+            const usersCollection = collection(firestore, 'users');
+            const emailQuery = query(usersCollection, where('email', '==', email));
+            const querySnapshot = await getDocs(emailQuery);
+
+            if (!querySnapshot.empty) {
+                const userDoc = querySnapshot.docs[0];
+                return { id: userDoc.id, data: userDoc.data() }; // Corrected the return statement
+            } else {
+                console.error('No user found with the specified email');
+                return null;
+            }
+        } catch (error) {
+            console.error('Error fetching user data:', error);
+            return null;
+        }
+    };
+
+    useEffect(() => {
+        const fetchReasons = async () => {
+          try {
+            // Check if user and user.email are defined
+            if (user && user.email) {
+              const usersCollection = collection(firestore, 'users');
+              const emailQuery = query(usersCollection, where('email', '==', user.email));
+              const querySnapshot = await getDocs(emailQuery);
+    
+              if (!querySnapshot.empty) {
+                const userDoc = querySnapshot.docs[0];
+                setReasons(userDoc.data().reasons);
+              } else {
+                console.error('No user found with the specified email');
+              }
+            } else {
+              console.error('User or user.email is undefined');
+            }
+          } catch (error) {
+            console.error('Error fetching reasons:', error);
+          }
+        };
+
+        const fetchCigarettes = async () => {
+            try {
+                if (user && user.email) {
+                    const { id, data } = await fetchUserDataByEmail(user.email);
+        
+                    if (id) {
+                        setFetchCigarettes(data.cigarettes);
+                    }
+                } else {
+                    console.error('User or user.email is undefined');
+                }
+            } catch (error) {
+                console.error('Error fetching cigarettes value:', error);
+            }
+        };
+    
+        fetchReasons();
+        fetchCigarettes();
+      }, [user]);
+
+    const handleCigarettesSubmit = async () => {
+        console.log('Cigarettes value:', cigarettesInput);
+        try {
+            if (user && user.email) {
+                const { id } = await fetchUserDataByEmail(user.email);
+
+                if (id) {
+                    const usersCollection = collection(firestore, 'users');
+                    await updateDoc(doc(usersCollection, id), {
+                        cigarettes: cigarettesInput,
+                    });
+
+                    console.log('Cigarettes value updated successfully');
+                }
+            } else {
+                console.error('User or user.email is undefined');
+            }
+        } catch (error) {
+            console.error('Error updating cigarettes value:', error);
+        }
+    };
+
+    
+
+
+   
 
     return (
         <>
@@ -42,6 +146,7 @@ function Dashboard() {
                 isOpen={isModalOpen}
                 onRequestClose={closeModal}
                 contentLabel="Multiselect Modal"
+                ariaHideApp={false}
             >
                 <div className='mt-10'>
                     <h2>Reason you Smoked today??</h2>
@@ -54,6 +159,9 @@ function Dashboard() {
                             type="number"
                             id="cigarettesInput"
                             className="mt-1 p-2 w-full border rounded-md"
+                            value={cigarettesInput}
+                            onChange={(e) => setCigarettesInput(e.target.value)}
+
                         />
                     </div>
 
@@ -70,9 +178,9 @@ function Dashboard() {
                     <div className="p-4 m-4 border rounded-lg shadow-md">
                         <h3 className="text-2xl font-bold uppercase mb-2">Streak</h3>
                         <div className='flex'>
-                            
-                            <StreakCalendar/>
-                            
+
+                        <StreakCalendar isLoggedIn={user ? true : false} />
+
                             <img src={streak} alt='streak' className='h-8' />
                         </div>
                         <button onClick={openModal} className='mt-4 p-2 bg-blue-500 text-white rounded-md'>
@@ -86,21 +194,34 @@ function Dashboard() {
                         <h3 className='text-1xl font-bold mb-2'>Reason you have been Smoking</h3>
                         <div className='overflow-y-auto max-h-20'>
                             <ul>
-                                <li>Reason 1</li>
-                                <li>Reason 2</li>
-                                <li>Reason 3</li>
-                                <li>Reason 4</li>
-                                <li>Reason 5</li>
+                                {reasons.map((reason, index) => (
+                                    <li className='capitalize' key={index}>{index + 1 + ". "}{reason}</li>
+                                ))}
                             </ul>
                         </div>
                     </div>
+
+            
+                </div>
+
+                <div className='ml-20'>
+                    <div className='flex'>
+                        <div><Profile /></div>
+                    </div>
+
+                    <div className='overflow-y-auto overflow-x-hidden max-h-30 mt-5'>
+                        <CigaretteTrackerWithGauge
+                            dailyCigarettes={fetchCigarettes}
+                        />
+
+                    </div>
+
                     <div className='flex px-10 gap-5 mt-8'>
                         <div className='border rounded-lg shadow-md h-40 w-40'>
                             <h4 className='flex justify-center p-3 text-black'>
-                                Time Capsule
-                                <FaPencilAlt className='text-lg p-1 cursor-pointer' />
+                                Sucess Stories
                             </h4>
-                            <img src={mic} alt='audio for self' className='m-auto cursor-pointer' />
+                            <AudioC />
                         </div>
                         <div className='border rounded-lg shadow-md h-40 w-40'>
                             <h4 className='flex justify-center p-3 text-black'>Stat of the Day</h4>
@@ -112,25 +233,6 @@ function Dashboard() {
                             />
                         </div>
 
-                    </div>
-                </div>
-
-                <div className='ml-20'>
-                    <div className='flex'>
-                        <div>
-                            <h3>User Badges</h3>
-                        </div>
-                        <div><Profile /></div>
-                    </div>
-
-                    <div>
-                        <h3 className="text-lg font-bold mb-4">Happy Moments for you </h3>
-                        <div className="max-w-2xl bg-gray-200 rounded-md text-center" >
-                            <PhotoCarousel />
-                        </div>
-                    </div>
-                    <div className='overflow-y-auto overflow-x-hidden max-h-30 mt-5'>
-                        <Heatmap />
                     </div>
                 </div>
 
