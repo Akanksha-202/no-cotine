@@ -18,12 +18,12 @@ const Home = () => {
         <section className="home" id="home">
           <div className="home__container bd-container bd-grid">
             <div className="home__img">
-              <img src="https://res.cloudinary.com/dzy4r0fgy/image/upload/v1687070027/3dheartrainbow-2_cbzjoi.png" alt="" className="vert-move" />
+              <img src="https://res.cloudinary.com/dx0dgujbj/image/upload/v1706715201/Nocotine/3_i7hx8s.png" alt="" className="vert-move" />
             </div>
             <div className="home__data">
               <h1 className="home__title">Nocotine 🚭</h1>
               <p className="home__description">
-              A supportive hub for those breaking free from smoking habits. We offer tools, discussions, and a caring community, fostering a positive journey toward a smoke-free life.
+                A supportive hub for those breaking free from smoking habits. We offer tools, discussions, and a caring community, fostering a positive journey toward a smoke-free life.
               </p>
             </div>
           </div>
@@ -36,11 +36,11 @@ const Home = () => {
                 How Nicotine was Born? <br />{" "}
               </h2>
               <p className="share__description">
-              No-cotine traces its roots back to a realization – the struggle individuals face in quitting smoking lacked a comprehensive and supportive solution. Motivated by this insight, our project was conceived to bridge the gap between the challenge of nicotine addiction and the need for a holistic, empowering platform. We aspire to create a safe digital space that guides and supports individuals on their journey to a smoke-free life, ensuring that no one feels alone in their pursuit of a healthier lifestyle.
+                No-cotine traces its roots back to a realization – the struggle individuals face in quitting smoking lacked a comprehensive and supportive solution. Motivated by this insight, our project was conceived to bridge the gap between the challenge of nicotine addiction and the need for a holistic, empowering platform. We aspire to create a safe digital space that guides and supports individuals on their journey to a smoke-free life, ensuring that no one feels alone in their pursuit of a healthier lifestyle.
               </p>
             </div>
             <div className="share__img">
-              <img src="https://res.cloudinary.com/dzy4r0fgy/image/upload/v1687071718/pryde_graphics_b3ncuu.png" alt="" className='move-round' />
+              <img src="https://res.cloudinary.com/dx0dgujbj/image/upload/v1706715201/Nocotine/4_szb7nc.png" alt="" className='move-round' />
             </div>
           </div>
         </section>
@@ -87,7 +87,7 @@ const Home = () => {
           <div className="decoration__container bd-grid">
             <div className="decoration__data">
               <img
-                src="https://res.cloudinary.com/dzy4r0fgy/image/upload/v1687072589/pryde_graphics-3_ylq42o.png"
+                src="https://res.cloudinary.com/dx0dgujbj/image/upload/v1706715201/Nocotine/2_e3kmqq.png"
                 alt=""
                 className="decoration__img"
                 id="apple_render"
@@ -107,13 +107,13 @@ const Home = () => {
             </div>
             <div className="decoration__data">
               <img
-                src="https://res.cloudinary.com/dzy4r0fgy/image/upload/v1687072287/pryde_graphics-2_rnm5jd.png"
+                src="https://res.cloudinary.com/dx0dgujbj/image/upload/v1706715201/Nocotine/5_tn1tld.png"
                 alt=""
                 className="decoration__img"
                 id="burger_render"
               />
-              <h3 className="decoration__title">InclusiBot</h3>
-              <p>Co:here-powered chatbot for LGBTQ+ sexual health. Multilingual support with Azure Translator. Chat freely in your language!</p><br></br>
+              <h3 className="decoration__title">Smoke-Free Tracker</h3>
+              <p>Visualize progress with an intuitive heatmap and streak counter.ecord daily feelings through audio journaling for a holistic approach.</p><br></br>
               <div className="button">
                 <a
                   href="https://prydebot.streamlit.app/"
@@ -132,8 +132,9 @@ const Home = () => {
                 className="decoration__img"
                 id="milk_render"
               />
-              <h3 className="decoration__title">Forum d'amour</h3>
-              <p>An extensive community support forum for sexual health & hygiene. Get answers, collaborate, and empower yourself! </p><br></br>
+              <h3 className="decoration__title">Hypnotherapy Sessions</h3>
+              <p>Immerse yourself in transformative audio sessions designed to aid in quitting smoking.
+                Holistic support for mental and emotional well-being on your quit journey. </p><br></br>
               <div className="button">
                 <a
                   href="./view/hacksolve.html"
