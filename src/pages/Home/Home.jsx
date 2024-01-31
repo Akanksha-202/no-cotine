@@ -186,7 +186,7 @@ const Home = () => {
           <div className="footer__container bd-container bd-grid">
             <div className="footer__social">
               <h2 className="footer__title" style={{ color: "white" }}>
-                Built with &#129293; by Team Pryde
+                Built with &#129293; by Team Nocotine
               </h2>
               <div className="footer__icons">
                 <a
