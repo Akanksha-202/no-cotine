@@ -87,7 +87,7 @@ const Home = () => {
           <div className="decoration__container bd-grid">
             <div className="decoration__data">
               <img
-                src="https://res.cloudinary.com/dx0dgujbj/image/upload/v1706715201/Nocotine/2_e3kmqq.png"
+                src="https://res.cloudinary.com/dx0dgujbj/image/upload/c_scale,h_1080,w_1080/v1706716271/Nocotine/Untitled%20design-4/2_b6coag.png"
                 alt=""
                 className="decoration__img"
                 id="apple_render"
@@ -107,7 +107,7 @@ const Home = () => {
             </div>
             <div className="decoration__data">
               <img
-                src="https://res.cloudinary.com/dx0dgujbj/image/upload/v1706715201/Nocotine/5_tn1tld.png"
+                src="https://res.cloudinary.com/dx0dgujbj/image/upload/c_scale,w_1920/v1706715201/Nocotine/5_tn1tld.png"
                 alt=""
                 className="decoration__img"
                 id="burger_render"
@@ -127,7 +127,7 @@ const Home = () => {
             </div>
             <div className="decoration__data">
               <img
-                src="https://res.cloudinary.com/dzy4r0fgy/image/upload/v1687073260/pryde_graphics-4_t07meb.png"
+                src="https://res.cloudinary.com/dx0dgujbj/image/upload/c_scale,h_1080,w_1080/v1706716271/Nocotine/Untitled%20design-4/1_ylvtm5.png"
                 alt=""
                 className="decoration__img"
                 id="milk_render"
