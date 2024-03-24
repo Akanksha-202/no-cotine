@@ -8,6 +8,35 @@
   </tr>
 </table>
 
+## Table of Contents
+- [Winner of MLH's Month Long Hackathon](#winner-of-mlhs-month-long-hackathon)
+- [Introduction](#introduction)
+- [Winning Details](#winning-details)
+- [Achievement Description](#achievement-description)
+- [Backstory: Why We Built This Project](#backstory-why-we-built-this-project)
+- [Components of Website](#components-of-website)
+  - [Landing page](#landing-page)
+  - [About Us](#about-us)
+- [Key Features](#key-features)
+- [Technology Stack Used](#technology-stack-used)
+- [Contributors](#contributors)
+
+## Winner of MLH's Month Long Hackathon
+
+### Introduction
+I am thrilled to share that we emerged as the winner of the MLH's Month Long Hackathon organized by Major League Hacking ([MLH](https://mlh.io/)). This README serves to highlight the achievement and introduce you to the project that helped me clinch the victory.
+
+### Winning Details
+- **Hackathon Name:** MLH's Month Long Hackathon
+- **Date:** Jan 2024
+- **Category:** Best Use of Auth0
+
+### Achievement Description
+I had the privilege of winning the **Best Use of Auth0** category with my project, **Nocotine**. Our solution stood out to the judges due to its innovative approach to providing support for individuals striving to quit smoking. No-cotine leverages Auth0's authentication and authorization capabilities to ensure secure access to personalized resources and features, tailored to each user's journey towards a smoke-free life.
+
+### Link to Project
+To learn more about our winning project, you can check out the project submission on [Devpost](https://devpost.com/software/nocotine).
+
 ## Backstory: Why We Built This Project
 
 In our neighborhood, Aryan's persistent smoking habit cast a heavy shadow over his ambitious aspirations, affecting not only his personal well-being but also straining his relationships with his wife and children. The toll of his addiction manifested in moments of anger and frustration, creating a turbulent environment at home. Witnessing Aryan's struggles, I felt a deep empathy and a burning desire to make a positive change.
@@ -66,7 +95,7 @@ Inspired by Aryan's journey, we believe that every individual has the potential 
 
 Embrace your journey towards a smoke-free life with No-cotine's comprehensive features. Each key point is designed to empower, motivate, and support you at every step. Join No-cotine today, and let's celebrate your triumphs together!
 
-<h1 align='center'> Technology Stack Used</h1>
+### Technology Stack Used
 <div align="center">
  <img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white">
  <img src="https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white">
